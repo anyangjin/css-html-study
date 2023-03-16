@@ -1,0 +1,97 @@
+@font-face {
+  font-family: "SpoqaHanSansNeo-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Regular.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: "SpoqaHanSansNeo-Regular";
+}
+.des {
+  margin-left: 8px;
+}
+
+body {
+  background-color: #5a5eb6;
+}
+
+.login {
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+  background: #fff;
+  font-size: 12px;
+  padding: 18px 16px;
+}
+.login h1 {
+  /* 문제점 많음 이렇게하면 검색엔진 안되고 웹접근성 떨어지고 트리에서 사라짐
+  display: none; */
+  /* visibility: hidden; */
+  /* opacity: 0; */
+  /* width: 0;
+  height: 0;
+  overflow: hidden; */
+  /* 3개 같이 */
+  /* font-size: 0px;
+  line-height: 0px;
+  2가지 같이 */
+  /* https://paullabworkspace.notion.site/75c36e0b55fc40cbb93aeb2ecaa7fec5 */
+  /* h1 로그인 텍스트 지우는 방법들 링크 참조 */
+}
+.btn-login {
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  display: block;
+  background-color: #5a5eb6;
+  border-radius: 4px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  height: 40px;
+  line-height: 50px;
+  margin: 16px 0;
+}
+.login-text {
+  margin-bottom: 10px;
+  padding-bottom: 100px;
+}
+
+.btn-login img {
+  height: 18px;
+}
+
+.login-link {
+  text-decoration: none;
+  color: #767676;
+}
+.login-link a:last-child {
+  float: right;
+}
+
+.find-id {
+  /* background: url(../img/icon-lock.png) no-repeat 0 0 / 1em; */
+  background-image: url(../wenivimg/icon-lock.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 1em;
+  padding-left: 1.2em;
+}
+
+.find-id + span {
+  display: inline-block;
+  width: 1px;
+  height: 12px;
+  background: #767676;
+  vertical-align: middle;
+  margin: 0 4px;
+}
+
+.btn-join {
+  background-image: url(../wenivimg/icon-user.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 1em;
+  padding-left: 1.2em;
+}
