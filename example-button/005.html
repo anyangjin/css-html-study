@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>button transition</title>
+    <style>
+      body {
+        background: #9b9999;
+      }
+
+      [class^="btn"] {
+        /* 꺽세를 사용해서 전체 btn 활용 */
+        width: 88px;
+        height: 32px;
+        background: #343f34;
+        border: 1px solid #1a201a;
+        box-shadow: inset 1px 1px #101210;
+        color: #cbd5cb;
+        cursor: pointer;
+      }
+
+      [class^="btn"]:hover {
+        text-decoration: underline;
+        color: wheat;
+        transition: color 2s, background-color 4s;
+        /* 시간 설정 가능 - 색이 천천히 변화하게 됨 */
+        /* transition: all 2 ease, background-color 4s; */
+        /* transition:  all linear;
+        균일하게 할떄 사용 */
+      }
+
+      .btn:active {
+        /* 클릭시 활성화(누르고 있는 동안) */
+        box-shadow: inset 1px 1px #262f32;
+      }
+      /* 
+      .btn:visited {
+        - 사용자가 이미 방문한 링크일 경우 해당 상태에 만족합니다
+           - 웹브라우저의 방문기록 정보를 사용합니다.
+      } */
+
+      .btn:disabled {
+        /* 비활성화 된 요소를 선택합니다 */
+        box-shadow: none;
+        color: #4a5568;
+        text-decoration: none;
+        background-color: #343f34;
+        border: 1px solid #343e4e;
+      }
+
+      .btn:hover {
+        /* 마우스 커서를 요소에 올려두었을 때 */
+        text-decoration: underline;
+        color: white;
+      }
+      /* .btn:not(:disabled):hover {
+        마우스 커서를 요소에 올려두었을 때
+        text-decoration: underline;
+        color: white;
+      }
+ */
+      /* .btn:disabled {
+      } */
+
+      .btn:focus {
+        /* focus 받은 상태를 나타냅니다 */
+        outline: none;
+        border: 1px solid royalblue;
+      }
+      [class$="positive"] {
+        color: royalblue;
+        /* .btn-positive {
+        color: royalblue;
+      } 두개 같음*/
+      }
+
+      .btn-positive:hover,
+      .btn-positive:active {
+        background: royalblue;
+        border: 1px solid royalblue;
+        /* box-shadow: inset 1px 1px royalblue;
+      } */
+      }
+      .btn-positive:hover {
+        box-shadow: inset 1px 1px royalblue;
+      }
+      .btn-positive:active {
+        box-shadow: inset 1px 1px royalblue;
+      }
+      .btn-negative {
+        color: red;
+      }
+
+      .btn-negative:hover,
+      .btn-negative:active {
+        background: royalblue;
+        border: 1px solid royalblue;
+        /* box-shadow: inset 1px 1px royalblue;
+      } */
+      }
+      .btn-negative:hover {
+        box-shadow: inset 1px 1px royalblue;
+      }
+      .btn-negative:active {
+        box-shadow: inset 1px 1px royalblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <button class="btn" type="button">Button</button>
+      <button class="btn-positive" type="button">Yes</button>
+      <button class="btn-negative" type="button">Del</button>
+      <button class="btn" type="button disabled">button</button>
+    </div>
+  </body>
+</html>
