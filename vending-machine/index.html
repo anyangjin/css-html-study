@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/style.css" />
+    <title>Vending-machine</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- 메인 로고 -->
+      <img class="logo" src="./images/logo.png" alt="" />
+      <!-- 메인 로고 -->
+      <div class="section-all">
+        <div class="sec1">
+          <!-- 콜라 박스 -->
+          <div class="cola-container">
+            <div class="cola-six select">
+              <img src="./images/cola-red.png" alt="" />
+              <p class="cola-six-name">Original_Cola</p>
+              <p class="cola-six-cash">1000원</p>
+            </div>
+            <div class="cola-six">
+              <div class="sold-out">
+                <img src="./images/sold-out.png" alt="" />
+              </div>
+              <img src="./images/cola-violet.png" alt="" />
+              <p class="cola-six-name">Violet_Cola</p>
+              <p class="cola-six-cash">1000원</p>
+            </div>
+            <div class="cola-six">
+              <img src="./images/cola-yellow.png" alt="" />
+              <p class="cola-six-name">Yellow_Cola</p>
+              <p class="cola-six-cash">1000원</p>
+            </div>
+            <div class="cola-six">
+              <img src="./images/cola-blue.png" alt="" />
+              <p class="cola-six-name">Cool_Cola</p>
+              <p class="cola-six-cash">1000원</p>
+            </div>
+            <div class="cola-six select">
+              <img src="./images/cola-green.png" alt="" />
+              <p class="cola-six-name">Green_Cola</p>
+              <p class="cola-six-cash">1000원</p>
+            </div>
+            <div class="cola-six">
+              <img src="./images/cola-orange.png" alt="" />
+              <p class="cola-six-name">Orange_Cola</p>
+              <p class="cola-six-cash">1000원</p>
+            </div>
+          </div>
+          <!-- 콜라 박스 -->
+          <!-- 잔액: 1,000원 -->
+          <div class="balance-wrapper">
+            <div class="flex-col mr-12">
+              <div class="balance-cash">
+                <p>잔액:</p>
+                <p>1,000원</p>
+              </div>
+              <!-- <div class="pay-entry">입금액 입력 (금액 적어 지도록)</div> -->
+              <input class="pay-entry" type="text" placeholder="입금액 입력" />
+            </div>
+            <div class="flex-col">
+              <button class="return-cash">거스름돈 반환</button>
+              <button class="deposit">입금</button>
+            </div>
+          </div>
+          <!-- 잔액: 1,000원 -->
+          <!-- 스크롤 콜라 -->
+          <div class="scroll-obtain-wrapper">
+            <div class="scroll-p mt-12 mr-12">
+              <div class="scroll-cola-wrapper">
+                <div class="scroll-cola-box mt-3">
+                  <div class="scroll-cola-box-left">
+                    <img src="./images/cola-red.png" alt="" />
+                    <p class="scroll-cola-text">Original_Cola</p>
+                  </div>
+                  <p class="scroll-cola-num">1</p>
+                </div>
+                <div class="scroll-cola-box">
+                  <div class="scroll-cola-box-left">
+                    <img src="./images/cola-green.png" alt="" />
+                    <p class="scroll-cola-text">Green_Cola</p>
+                  </div>
+                  <p class="scroll-cola-num">2</p>
+                </div>
+                <!-- visibility-hidden  -->
+                <div class="visibility-hidden">
+                  <div class="scroll-cola-box mb-3">
+                    <div class="scroll-cola-box-left">
+                      <img src="./images/cola-red.png" alt="" />
+                      <p class="scroll-cola-text">Original_Cola</p>
+                    </div>
+                    <p class="scroll-cola-num">3</p>
+                  </div>
+                </div>
+                <!-- visibility-hidden  -->
+              </div>
+            </div>
+            <!-- 스크롤 콜라 -->
+            <!-- 획득 -->
+            <div>
+              <button class="obtain-btn">획득</button>
+            </div>
+            <!-- 획득 -->
+          </div>
+        </div>
+        <div class="sec2">
+          <!-- 소지금 -->
+          <div class="funds-wrapper">
+            <div class="funds-box">
+              <p>소지금 :</p>
+              <p>25,000원</p>
+            </div>
+          </div>
+          <!-- 소지금 -->
+          <!-- 획득한 음료 -->
+          <div class="obtain-drink-wrapper">
+            <p class="obtain-drink-text">획득한 음료</p>
+            <div class="scroll-p">
+              <div class="obtain-scroll-cola">
+                <div class="obtain-scroll-cola-box mt-3">
+                  <div class="scroll-cola-box-left">
+                    <img src="./images/cola-red.png" alt="" />
+                    <p class="scroll-cola-text">Original_Cola</p>
+                  </div>
+                  <p class="scroll-cola-num">1</p>
+                </div>
+                <div class="obtain-scroll-cola-box">
+                  <div class="scroll-cola-box-left">
+                    <img src="./images/cola-green.png" alt="" />
+                    <p class="scroll-cola-text">Green_Cola</p>
+                  </div>
+                  <p class="scroll-cola-num">2</p>
+                </div>
+                <div class="obtain-scroll-cola-box">
+                  <div class="scroll-cola-box-left">
+                    <img src="./images/cola-orange.png" alt="" />
+                    <p class="scroll-cola-text">Orange_Cola</p>
+                  </div>
+                  <p class="scroll-cola-num">1</p>
+                </div>
+                <div class="obtain-scroll-cola-box">
+                  <div class="scroll-cola-box-left">
+                    <img src="./images/cola-violet.png" alt="" />
+                    <p class="scroll-cola-text">Violet_Cola</p>
+                  </div>
+                  <p class="scroll-cola-num">5</p>
+                </div>
+                <!-- visibility-hidden 이용해서 스크롤 최소 길이 더 작게 --><!-- visibility-hidden -->
+                <div class="visibility-hidden">
+                  <div class="obtain-scroll-cola-box">
+                    <div class="scroll-cola-box-left">
+                      <img src="./images/cola-blue.png" alt="" />
+                      <p class="scroll-cola-text">Original_Cola</p>
+                    </div>
+                    <p class="scroll-cola-num">2</p>
+                  </div>
+                  <div class="obtain-scroll-cola-box">
+                    <div class="scroll-cola-box-left">
+                      <img src="./images/cola-yellow.png" alt="" />
+                      <p class="scroll-cola-text">Original_Cola</p>
+                    </div>
+                    <p class="scroll-cola-num">2</p>
+                  </div>
+                  <div class="obtain-scroll-cola-box">
+                    <div class="scroll-cola-box-left">
+                      <img src="./images/cola-orange.png" alt="" />
+                      <p class="scroll-cola-text">Original_Cola</p>
+                    </div>
+                    <p class="scroll-cola-num">2</p>
+                  </div>
+                  <div class="obtain-scroll-cola-box">
+                    <div class="scroll-cola-box-left">
+                      <img src="./images/cola-red.png" alt="" />
+                      <p class="scroll-cola-text">Original_Cola</p>
+                    </div>
+                    <p class="scroll-cola-num">2</p>
+                  </div>
+                  <div class="obtain-scroll-cola-box">
+                    <div class="scroll-cola-box-left">
+                      <img src="./images/cola-yellow.png" alt="" />
+                      <p class="scroll-cola-text">Original_Cola</p>
+                    </div>
+                    <p class="scroll-cola-num">2</p>
+                  </div>
+                  <div class="obtain-scroll-cola-box">
+                    <div class="scroll-cola-box-left">
+                      <img src="./images/cola-red.png" alt="" />
+                      <p class="scroll-cola-text">Original_Cola</p>
+                    </div>
+                    <p class="scroll-cola-num">2</p>
+                  </div>
+                  <div class="obtain-scroll-cola-box">
+                    <div class="scroll-cola-box-left">
+                      <img src="./images/cola-red.png" alt="" />
+                      <p class="scroll-cola-text">Original_Cola</p>
+                    </div>
+                    <p class="scroll-cola-num">2</p>
+                  </div>
+                  <div class="obtain-scroll-cola-box">
+                    <div class="scroll-cola-box-left">
+                      <img src="./images/cola-red.png" alt="" />
+                      <p class="scroll-cola-text">Original_Cola</p>
+                    </div>
+                    <p class="scroll-cola-num">2</p>
+                  </div>
+                  <div class="obtain-scroll-cola-box">
+                    <div class="scroll-cola-box-left">
+                      <img src="./images/cola-red.png" alt="" />
+                      <p class="scroll-cola-text">Original_Cola</p>
+                    </div>
+                    <p class="scroll-cola-num">2</p>
+                  </div>
+                  <div class="obtain-scroll-cola-box">
+                    <div class="scroll-cola-box-left">
+                      <img src="./images/cola-red.png" alt="" />
+                      <p class="scroll-cola-text">Original_Cola</p>
+                    </div>
+                    <p class="scroll-cola-num">2</p>
+                  </div>
+                  <div class="obtain-scroll-cola-box mb-3">
+                    <div class="scroll-cola-box-left">
+                      <img src="./images/cola-red.png" alt="" />
+                      <p class="scroll-cola-text">Original_Cola</p>
+                    </div>
+                    <p class="scroll-cola-num">3</p>
+                  </div>
+                  <div class="obtain-scroll-cola-box">
+                    <div class="scroll-cola-box-left">
+                      <img src="./images/cola-red.png" alt="" />
+                      <p class="scroll-cola-text">Original_Cola</p>
+                    </div>
+                    <p class="scroll-cola-num">2</p>
+                  </div>
+                  <div class="obtain-scroll-cola-box">
+                    <div class="scroll-cola-box-left">
+                      <img src="./images/cola-red.png" alt="" />
+                      <p class="scroll-cola-text">Original_Cola</p>
+                    </div>
+                    <p class="scroll-cola-num">2</p>
+                  </div>
+                  <div class="obtain-scroll-cola-box mb-3">
+                    <div class="scroll-cola-box-left">
+                      <img src="./images/cola-red.png" alt="" />
+                      <p class="scroll-cola-text">Original_Cola</p>
+                    </div>
+                    <p class="scroll-cola-num">3</p>
+                  </div>
+                  <div class="obtain-scroll-cola-box">
+                    <div class="scroll-cola-box-left">
+                      <img src="./images/cola-red.png" alt="" />
+                      <p class="scroll-cola-text">Original_Cola</p>
+                    </div>
+                    <p class="scroll-cola-num">2</p>
+                  </div>
+                  <div class="obtain-scroll-cola-box">
+                    <div class="scroll-cola-box-left">
+                      <img src="./images/cola-red.png" alt="" />
+                      <p class="scroll-cola-text">Original_Cola</p>
+                    </div>
+                    <p class="scroll-cola-num">2</p>
+                  </div>
+                  <div class="obtain-scroll-cola-box mb-3">
+                    <div class="scroll-cola-box-left">
+                      <img src="./images/cola-red.png" alt="" />
+                      <p class="scroll-cola-text">Original_Cola</p>
+                    </div>
+                    <p class="scroll-cola-num">3</p>
+                  </div>
+                  <div class="obtain-scroll-cola-box">
+                    <div class="scroll-cola-box-left">
+                      <img src="./images/cola-red.png" alt="" />
+                      <p class="scroll-cola-text">Original_Cola</p>
+                    </div>
+                    <p class="scroll-cola-num">2</p>
+                  </div>
+                  <div class="obtain-scroll-cola-box">
+                    <div class="scroll-cola-box-left">
+                      <img src="./images/cola-red.png" alt="" />
+                      <p class="scroll-cola-text">Original_Cola</p>
+                    </div>
+                    <p class="scroll-cola-num">2</p>
+                  </div>
+                  <div class="obtain-scroll-cola-box mb-3">
+                    <div class="scroll-cola-box-left">
+                      <img src="./images/cola-red.png" alt="" />
+                      <p class="scroll-cola-text">Original_Cola</p>
+                    </div>
+                    <p class="scroll-cola-num">3</p>
+                  </div>
+                  <div class="obtain-scroll-cola-box">
+                    <div class="scroll-cola-box-left">
+                      <img src="./images/cola-red.png" alt="" />
+                      <p class="scroll-cola-text">Original_Cola</p>
+                    </div>
+                    <p class="scroll-cola-num">2</p>
+                  </div>
+                  <div class="obtain-scroll-cola-box">
+                    <div class="scroll-cola-box-left">
+                      <img src="./images/cola-red.png" alt="" />
+                      <p class="scroll-cola-text">Original_Cola</p>
+                    </div>
+                    <p class="scroll-cola-num">2</p>
+                  </div>
+                  <div class="obtain-scroll-cola-box mb-3">
+                    <div class="scroll-cola-box-left">
+                      <img src="./images/cola-red.png" alt="" />
+                      <p class="scroll-cola-text">Original_Cola</p>
+                    </div>
+                    <p class="scroll-cola-num">3</p>
+                  </div>
+                  <div class="obtain-scroll-cola-box">
+                    <div class="scroll-cola-box-left">
+                      <img src="./images/cola-red.png" alt="" />
+                      <p class="scroll-cola-text">Original_Cola</p>
+                    </div>
+                    <p class="scroll-cola-num">2</p>
+                  </div>
+                  <div class="obtain-scroll-cola-box">
+                    <div class="scroll-cola-box-left">
+                      <img src="./images/cola-red.png" alt="" />
+                      <p class="scroll-cola-text">Original_Cola</p>
+                    </div>
+                    <p class="scroll-cola-num">2</p>
+                  </div>
+                  <div class="obtain-scroll-cola-box mb-3">
+                    <div class="scroll-cola-box-left">
+                      <img src="./images/cola-red.png" alt="" />
+                      <p class="scroll-cola-text">Original_Cola</p>
+                    </div>
+                    <p class="scroll-cola-num">3</p>
+                  </div>
+                  <div class="obtain-scroll-cola-box">
+                    <div class="scroll-cola-box-left">
+                      <img src="./images/cola-red.png" alt="" />
+                      <p class="scroll-cola-text">Original_Cola</p>
+                    </div>
+                    <p class="scroll-cola-num">2</p>
+                  </div>
+                  <div class="obtain-scroll-cola-box">
+                    <div class="scroll-cola-box-left">
+                      <img src="./images/cola-red.png" alt="" />
+                      <p class="scroll-cola-text">Original_Cola</p>
+                    </div>
+                    <p class="scroll-cola-num">2</p>
+                  </div>
+                  <div class="obtain-scroll-cola-box">
+                    <div class="scroll-cola-box-left">
+                      <img src="./images/cola-red.png" alt="" />
+                      <p class="scroll-cola-text">Original_Cola</p>
+                    </div>
+                    <p class="scroll-cola-num">2</p>
+                  </div>
+                  <div class="obtain-scroll-cola-box">
+                    <div class="scroll-cola-box-left">
+                      <img src="./images/cola-red.png" alt="" />
+                      <p class="scroll-cola-text">Original_Cola</p>
+                    </div>
+                    <p class="scroll-cola-num">2</p>
+                  </div>
+                  <div class="obtain-scroll-cola-box">
+                    <div class="scroll-cola-box-left">
+                      <img src="./images/cola-red.png" alt="" />
+                      <p class="scroll-cola-text">Original_Cola</p>
+                    </div>
+                    <p class="scroll-cola-num">2</p>
+                  </div>
+                  <div class="obtain-scroll-cola-box">
+                    <div class="scroll-cola-box-left">
+                      <img src="./images/cola-red.png" alt="" />
+                      <p class="scroll-cola-text">Original_Cola</p>
+                    </div>
+                    <p class="scroll-cola-num">2</p>
+                  </div>
+                  <div class="obtain-scroll-cola-box mb-3">
+                    <div class="scroll-cola-box-left">
+                      <img src="./images/cola-red.png" alt="" />
+                      <p class="scroll-cola-text">Original_Cola</p>
+                    </div>
+                    <p class="scroll-cola-num">3</p>
+                  </div>
+                  <!-- visibility-hidden --><!-- visibility-hidden -->
+                </div>
+              </div>
+            </div>
+            <div class="total-price">
+              <p>총금액 : 9,000 원</p>
+            </div>
+          </div>
+          <!-- 획득한 음료 -->
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

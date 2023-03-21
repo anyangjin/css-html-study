@@ -1,0 +1,544 @@
+* {
+  margin: 0;
+}
+body {
+  background-color: #eae8fe;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+  -ms-overflow-style: none; /* 인터넷 익스플로러 */
+  scrollbar-width: none; /* 파이어폭스 */
+}
+
+.section-all {
+  display: flex;
+  flex-direction: row;
+}
+.sec1 {
+  height: 545px;
+  margin-right: 28px;
+}
+.sec2 {
+  height: 545px;
+}
+
+@media (max-width: 752px) {
+  .sec1 {
+    margin-right: 0;
+    height: calc(545px - 17px);
+  }
+
+  .section-all {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.mr-12 {
+  margin-right: 12px;
+}
+
+.mr-3 {
+  margin-right: 3px;
+}
+.mb-3 {
+  margin-bottom: 3px;
+}
+
+.logo {
+  width: 386px;
+  height: 164.12px;
+  margin-bottom: 67px;
+}
+@media (max-width: 752px) {
+  .logo {
+    margin-bottom: 24.88px;
+  }
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+/* 콜라 6개 박스 */
+
+.cola-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 360px;
+  background: #ffffff;
+  gap: 12px;
+  padding: 31px 27px 20px 27px;
+}
+
+.cola-six {
+  /* box-shadow: inset 0 0 10px red; */
+  width: 94px;
+  height: 130px;
+  background: #ffffff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  box-shadow: 0px 0px 4px 0px #00000080;
+  transition: all 0.3s linear;
+  /* overflow: hidden; */
+  cursor: pointer;
+}
+
+.cola-six:hover {
+  transform: scale(1.1);
+}
+
+.cola-six.select {
+  box-shadow: 0 0 0 3px #6327fe inset;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.cola-six img {
+  width: 36px;
+  height: 65px;
+
+  margin-top: 11.07px;
+  margin-bottom: 6.07px;
+  margin-left: 29px;
+  margin-right: 29px;
+}
+
+.sold-out {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 94px;
+  height: 130px;
+
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+}
+.sold-out img {
+  position: absolute;
+  left: 19.23px;
+  top: 49.21px;
+  z-index: 3;
+  transform: rotate(5.15deg);
+  width: 57.51px;
+  height: 44.85px;
+
+  margin: 0;
+}
+
+.cola-six-name {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 9px;
+  line-height: 13px;
+  color: #333333;
+  margin-left: 11px;
+  margin-right: 10px;
+}
+
+.cola-six-cash {
+  color: white;
+  width: 70px;
+  height: 22px;
+  background: #6327fe;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 7px 10px 9px 13px;
+  font-weight: 500;
+  font-size: 12px;
+  /* padding: 15px 5px 16px 5px; */
+}
+
+/* 콜라 6개 박스 */
+
+/* 잔액, 입금액 입력, 거스름돈 반환, 입금 */
+
+.balance-wrapper {
+  display: flex;
+  box-sizing: border-box;
+  padding: 0 27px;
+  /* flex-wrap: wrap; */
+  width: 100%;
+  background-color: white;
+  max-width: 360px;
+  font-size: 14px;
+  font-weight: 500px;
+  flex-wrap: wrap;
+}
+.balance-cash {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #eae8fe;
+  box-sizing: border-box;
+  width: 200px;
+  height: 33px;
+  margin-bottom: 11px;
+  border-radius: 5px;
+  padding: 6px 10px 7px 10px;
+  cursor: pointer;
+}
+
+.pay-entry {
+  border: none;
+  box-shadow: 0 0 0 1px #bdbdbd inset;
+  box-sizing: border-box;
+  width: 200px;
+  height: 33px;
+  background-color: white;
+  border-radius: 5px;
+  padding-left: 6px;
+}
+
+.pay-entry::placeholder {
+  color: #bdbdbd;
+}
+
+.return-cash {
+  width: 94px;
+  margin-bottom: 11px;
+  border-radius: 5px;
+  height: 33px;
+  border: none;
+  box-shadow: 0px 0px 4px 0px #00000080;
+  background-color: white;
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+
+.return-cash:hover {
+  transform: scale(1.1);
+}
+
+.deposit {
+  height: 32px;
+  background-color: white;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0px 0px 4px 0px #00000080;
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+
+.deposit:hover {
+  transform: scale(1.1);
+}
+
+/* 잔액, 입금액 입력, 거스름돈 반환, 입금 */
+
+/* 선택 음료 스크롤 콜라 박스 */
+.scroll-obtain-wrapper {
+  display: flex;
+  background-color: white;
+  /* padding-top: 12px; */
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 360px;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 28px;
+}
+
+@media (max-width: 752px) {
+  .scroll-obtain-wrapper {
+    padding-bottom: 11px;
+  }
+}
+
+.mt-12 {
+  margin-top: 12px;
+}
+
+.mb-12 {
+  margin-bottom: 12px;
+}
+
+.scroll-cola-wrapper {
+  /* border: 1px #bdbdbd solid; */
+  overflow: auto;
+  /* border-radius: 5px; */
+  background-color: #eae8fe;
+  margin-bottom: 9px;
+  width: 194px;
+  height: 97px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.scroll-cola-box {
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  height: 48px;
+  width: 170px;
+}
+.scroll-cola-box-left {
+  display: flex;
+}
+
+.scroll-cola-box-left img {
+  width: 17.93px;
+  height: 32.93px;
+  margin-top: 6px;
+  margin-left: 10px;
+  margin-bottom: 7px;
+}
+
+.scroll-cola-text {
+  font-weight: 500;
+  font-size: 9px;
+  line-height: 13px;
+  color: #333333;
+  margin-top: 18px;
+  margin-bottom: 18px;
+  margin-left: 10px;
+}
+
+.scroll-cola-num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0 1px #bdbdbd inset;
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 8px 8px 8px 21px;
+}
+
+.obtain-btn {
+  background: #6327fe;
+  width: 94px;
+  height: 106px;
+  margin-top: 12px;
+  color: white;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 19px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+
+.obtain-btn:hover {
+  transform: scale(1.1);
+}
+
+/* 선택 음료 스크롤 콜라 박스 */
+
+/* 소지금 */
+
+.funds-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 360px;
+  height: 50px;
+}
+
+.funds-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #eae8fe;
+  border-radius: 5px;
+  width: 306px;
+  height: 32px;
+}
+
+.funds-box p {
+  color: black;
+  margin: 6px 10px;
+}
+.funds-box :nth-child(1) {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+}
+.funds-box :nth-child(2) {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+/* 소지금 */
+
+/* 획득한 음료 */
+
+.obtain-drink-wrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  /* padding-top: 12px; */
+  box-sizing: border-box;
+  width: 360px;
+  /* 위드값 확인하기*/
+  height: 477px;
+  /* width: 100%;
+  max-width: 360px; */
+  margin-top: 20px;
+  align-items: center;
+}
+
+@media (max-width: 752px) {
+  .obtain-drink-wrapper {
+    margin-top: 0px;
+  }
+}
+
+.obtain-drink-text {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  width: 68px;
+  height: 20px;
+  color: black;
+  margin-top: 25px;
+  margin-bottom: 13px;
+}
+
+.obtain-scroll-cola-box {
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  height: 46px;
+  width: 272px;
+}
+
+.obtain-scroll-cola {
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  width: 306px;
+  height: 364px;
+}
+
+.scroll-p {
+  box-sizing: border-box;
+  padding-right: 4px;
+  padding-top: 9px;
+
+  /* overflow: auto; */
+  border: 1px #bdbdbd solid;
+  border-radius: 5px;
+  background-color: #eae8fe;
+}
+
+.obtain-scroll-cola::-webkit-scrollbar,
+.scroll-cola-wrapper::-webkit-scrollbar {
+  width: 4px;
+}
+
+.obtain-scroll-cola::-webkit-scrollbar-thumb,
+.scroll-cola-wrapper::-webkit-scrollbar-thumb {
+  background-color: #ffffff;
+  border-radius: 50px;
+}
+/* height: 1%; */
+/* min-height: 1px; */
+/* height: 5px; */
+
+.scroll-cola-wrapper::-webkit-scrollbar-thumb {
+  background-color: #ffffff;
+  border-radius: 50px;
+  height: 79px;
+  /* height: 1%; */
+  /* min-height: 1px; */
+  /* height: 5px; */
+}
+
+.obtain-scroll-cola::-webkit-scrollbar-track,
+.scroll-cola-wrapper::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.obtain-scroll-cola img {
+  width: 17.93px;
+  height: 32.93px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 6px;
+  margin-left: 10px;
+  margin-bottom: 7px;
+}
+
+.obtain-scroll-cola-text {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 9px;
+  line-height: 13px;
+  color: #333333;
+  display: flex;
+  align-items: center;
+  margin-top: 18px;
+  margin-bottom: 18px;
+  margin-left: 10px;
+}
+
+.obtain-scroll-cola-num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #bdbdbd;
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 8px 8px 8px 21px;
+}
+
+/* 획득한 음료 */
+
+/* 총금액 */
+.total-price {
+  margin-top: 6px;
+  margin-right: 27px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 17px;
+  height: 20px;
+  color: #000000;
+  align-self: flex-end;
+}
+/* 총금액 */
+
+.visibility-hidden {
+  visibility: hidden;
+}
