@@ -1,0 +1,123 @@
+/* div 같은 건 타입 셀렉터 이다. */
+
+h1,
+p,
+h2,
+ul {
+  margin: initial;
+  padding: initial;
+  /* padding: ; 초기화 해줘라 */
+  /* margin: initial; - 브라우저가 제공해준 마진을 초기화해줘라 */
+}
+
+/* * {
+  margin: 0;
+  padding: ;
+  * 는 유니버셜 셀렉터 모든 요소가 다 선택된다. 
+ } */
+
+li {
+  list-style-type: none;
+  /* 맨앞에 점들을 없애줘라. ul에다가 해도 괜찮 */
+}
+
+ul {
+}
+
+img {
+  vertical-align: top;
+  /* 이미지 아래 빈공간을 해결 */
+}
+
+body {
+  background-image: url(images/background.gif);
+}
+
+.wrapper {
+  background-color: #ddd;
+  width: 800px;
+  margin: 40px;
+  border: 5px solid rgb(240, 31, 31);
+  text-align: center;
+}
+
+.header {
+  background-image: url(images/cover03.png);
+  /* height: auto; */
+  /* 처음엔 높이값을 직접적으로는 정하는걸 피해서
+   설정하는게 유용 늘어나는걸 고려 */
+  /* color: white; */
+  padding: 100px;
+  /* padding: ; 으로 자연스럽게 상하단 높이 줌 */
+  background-size: cover;
+  color: white;
+  /* h1,p 의 color: white; 를 여기에 줌 */
+}
+
+.header p {
+  /* margin: initial; */
+  /* box-shadow: inset 0 0 10px rgb(214, 43, 34); */
+}
+
+.header h1 {
+  /* 하위 셀렉터, 자손 셀렉터, desandant 셀렉터 라고 한다. */
+  /* .header 사이 h1 한칸 띄어쓴것도 의미가 있다 => desendant combinator */
+  /* box-shadow: inset 0 0 10px lime; */
+  /* box-shadow: ; 사용해서 공간 사용하는 방법을 알아야함 */
+  /* 경계면이 있고 공간을 차지하지 않아서 사용하기 유용! */
+  /* border-bottom: 5px solid white; */
+  /* height: inherit; */
+  /* 높이를 강제로 하겠다 부모의것을 그대로 받아옴 */
+  /* 상속은 해당 프로퍼티 값을 그대로 가져온다는것 */
+  border-bottom: 4px solid;
+  /* header의 부모 color가 white 라서 currentcolor 로 잡혀서 비운것 */
+  width: 200px;
+  margin: 30px auto;
+  /* 위아래 마진 30px 주고 좌우 오토 시계방향으로 위에서 부터 위 오른 아래 좌 */
+}
+
+.header img.profile {
+  border: 8px solid white;
+  border-radius: 0 40px 40px 0;
+  margin-bottom: 30px;
+  width: 150px;
+}
+
+.contents {
+}
+
+.section {
+  background-color: white;
+  margin: 30px;
+  padding: 30px;
+  text-align: left;
+  /* 까지해서 1 레이아웃을 먼저 만든다. 2. 마크업 추가하기. */
+  /* 마진 겹침은 마진병합으로 충분히 의도된 동작이다. */
+  /* 30 30 줬는데 60으로 안보이고 30처럼 보이는 이유 */
+  background-image: url(images/icon-information.png);
+  background-repeat: no-repeat;
+  background-position: right 40px center;
+  /* right기준에서 40px 옮기기 */
+}
+
+.section h2 {
+  color: ff6600;
+  margin-bottom: 20px;
+}
+
+.skills {
+  background-image: url(images/icon-skills.png);
+  /* 앞선 디자인 한번 들어가고 (덮어 씌워 지고) + .skills 꺼 들어간다. */
+  /* .section 보다 위쪽에 배치하면 안됨 브라우저가 고민함...우선 원칙 우선 순위 */
+}
+
+ul {
+}
+
+.footer {
+  /* background-color: #f4f4f4;
+  background-color: white;
+  margin: 30px;
+  padding: 30px;
+  text-align: left; */
+}
