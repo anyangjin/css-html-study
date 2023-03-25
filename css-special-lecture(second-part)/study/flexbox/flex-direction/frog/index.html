@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flexing</title>
+    <style>
+      body {
+        background-color: brown;
+      }
+      .playground {
+        border: 10px solid maroon;
+        width: 980px;
+        margin: 0 auto;
+        height: 400px;
+        border-radius: 20px;
+        background-color: skyblue;
+        display: flex;
+        justify-content: center;
+        /* 마진 오토로도 정렬을 못맞추고 6개부터 삐져나가서 저스티파이가 나선다. */
+        align-items: stretch;
+        /* 들어가있다. */
+      }
+      .frog {
+        background-color: mediumseagreen;
+        color: lime;
+        font-size: 40px;
+        border: 6px solid green;
+        border-radius: 10px;
+        margin: auto 10px;
+        /* flex-basis: auto; */
+        /* auto 컨텐츠 크기 만큼 */
+        /*  flex-grow: 1; 은 베이시스 값에다가 1 대 1대 1로 더한다? */
+        flex-basis: 200px;
+        /* flex-shrink: 1; */
+        /* 이미지를 하나 더 추가했지만 다같이 줄어드는 이유는 슈링크 값이 원래 1이라서  */
+        /* min-width: auto; */
+        /* 내부 자식 컨텐츠 만큼 자신의 최소 사이즈가 강제 되어버린다.
+        내부 컨텐츠의 너비 자신의 최소 사이즈로 강제한다는 뜻 */
+      }
+
+      .frog.sun {
+        /* flex-shrink: 0; */
+        /* 혼자 클래스로 묶여서 슈링크 0으로 혼자 방사이즈가 보장된다.. */
+        /* height를 주면 부모가 커지면 해당 헤이트를 준곳만 커지는게 아니라 나머지 자식들도 같이 커진다. */
+        /* 얼라인 아이템 초기값 플렉스 스트레치
+        저스티파이 콘텐츠 초기값 플렉스 스타트 */
+        /* 부모의 컨텐츠에 헤이트 400을 줘도 다 늘어나긴 하는데 align-item stretch가 기본값으로 다 들어가 있다. */
+        margin-top: auto;
+        margin-bottom: 0;
+        /* 하면 중앙 하나씩 두면 위아래 */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="playground">
+      <div class="frog"><img src="images/frog.png" alt="" />wow</div>
+      <div class="frog"><img src="images/frog-disco.png" alt="" /></div>
+      <div class="frog"><img src="images/frog-dj.png" alt="" /></div>
+      <div class="frog"><img src="images/frog-cry.png" alt="" /></div>
+      <div class="frog"><img src="images/frog-eat.png" alt="" /></div>
+      <div class="frog sun"><img src="images/frog-hang.png" alt="" /></div>
+    </div>
+    <!-- 개구리 하나 더 추가하면 6개 부터 오른쪽 밖으로 삐져나감 
+             min-width: auto;로 지정되어있음 내부의 컨텐츠 크기 만큼 
+            미니스 라는 프로퍼티가 더 못 작아지게 막고있다. -->
+  </body>
+</html>

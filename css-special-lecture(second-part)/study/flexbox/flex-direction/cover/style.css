@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+}
+body {
+  background-color: #111;
+}
+.cover {
+  background-color: #222;
+  color: white;
+  height: 500px;
+  display: flex;
+  /* 초기값 때문에 엄청커짐 */
+  align-items: flex-start;
+  /* 이걸로 잡아줌 */
+}
+.cover-logo {
+}
+.cover-desciption {
+}
