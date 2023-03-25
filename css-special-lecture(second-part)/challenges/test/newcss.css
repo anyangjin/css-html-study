@@ -1,0 +1,182 @@
+:root {
+  font-family: "Montserrat", sans-serif;
+  /*
+	font-weight: 500;
+	font-weight: 700;
+	*/
+}
+header {
+  /* margin: inherit;
+  padding: 0; */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #673399;
+  width: 100%;
+}
+
+p,
+h1,
+h2,
+h3 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.mt-24 {
+  margin-top: 24px;
+}
+
+.wrapper {
+  width: 1080px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.line {
+  /* display: block; */
+  width: 7%;
+  height: 1px;
+  background-color: #fff;
+  margin: auto 0px;
+  margin-right: 20px;
+}
+
+.contents {
+  display: flex;
+  width: 74%;
+}
+
+.header-hs {
+  color: white;
+  width: 26%;
+}
+
+.header-h1 {
+  font-size: 40px;
+}
+
+.header-strong {
+  font-size: 40px;
+  position: relative;
+  display: inline-block;
+}
+
+.header-strong::before {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  z-index: -3;
+  background-color: orangered;
+}
+
+.header-p {
+  font-size: 14px;
+  /* box-shadow: inset 0 0 10px rgb(51, 219, 70); */
+  color: #bd8fe8;
+  display: flex;
+  align-items: center;
+}
+
+.section {
+  width: 100%;
+  display: flex;
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
+
+.img-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  width: 26%;
+
+  position: relative;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(103, 51, 153, 0.3);
+}
+
+.img-1 {
+  background-image: url("./images/photo01.png");
+}
+.img-2 {
+  background-image: url("./images/photo02.png");
+}
+.img-3 {
+  background-image: url("./images/photo03.png");
+}
+
+.img-box > .text {
+  color: #fff;
+  font-size: 30px;
+  z-index: 3;
+}
+
+.description-box {
+  width: 74%;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  background-color: white;
+}
+
+.description-box > .title {
+  font-size: 18px;
+  color: #673399;
+  font-weight: 700;
+  margin-bottom: 32px;
+}
+
+.description-box > .list {
+  font-size: 14px;
+  color: rgb(70, 69, 69);
+}
+.list li {
+  position: relative;
+  list-style: none;
+  padding-left: 20px;
+}
+
+.list li:not(:last-child),
+.list li:not(:last-child)::before {
+  margin-bottom: 10px;
+}
+
+.list li::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: #bd8fe8;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
