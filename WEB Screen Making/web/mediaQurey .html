@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+  <title>WEB - html</title>
+  <meta charset="utf-8">
+  <style>
+  body{
+    margin:0;
+  }
+
+    a {
+      color:black;s
+      text-decoration: none;
+    }
+    h1 {
+      font-size: 55px;
+      text-align: center;
+      border-bottom:5px solid navy;
+      margin:0;
+      padding:20px;
+    }
+      ol {
+        border-right:5px solid navy;
+        border-bottom:5px solid navy;
+        border-left:5px solid navy;
+        text-align: center;
+        width:100px;
+      margin:0;
+      padding:15px;
+      }
+#grid{
+  display: grid;
+  grid-template-columns: 150px 1fr;
+}
+#article{
+  padding-left: 25px;
+}
+#grid ol{
+  padding-left: 33px;
+  }
+@media(max-width:200px;){
+  #grid {
+    display: block;
+  }
+  ol{
+    border-right:none;
+  }
+  h1{
+    border-bottom: none;
+  }
+}
+    </style>
+
+  </head>
+  <body>
+  <h1><a><font color="black"></a>WEB</h1>
+<div id="grid">
+  <ol>
+    <li><a>HTML</a></li>
+    <li><a>CSS</a></li>
+    <li><a>JavaScript</a></li>
+  </ol>
+<div id="article">
+
+    <h2>HTML</h2>
+<p>
+  HTML is the standard markup language for Web pages.
+With HTML you can create your own Website.
+</p>
+
+<h2>CSS</h2>
+<p>CSS is the language we use to style an HTML document.
+CSS describes how HTML elements should be displayed.
+This tutorial will teach you CSS from basic to advanced
+</p>
+  <h2>JavaScript</h2>
+<p>JavaScript is the world's most popular programming language.
+JavaScript is the programming language of the Web.
+JavaScript is easy to learn.
+This tutorial will teach you JavaScript from basic to advanced
+</p>
+</div>
+</div>
+</body>
+</html>

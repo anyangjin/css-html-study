@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+      #grid {
+        grid-template-columns: 1fr 1fr;
+        display: grid;
+        margin: 0%;
+        padding: 0%;
+        border-bottom: 10px solid black;
+      }
+      .logo {
+        background-color: rgb(24, 119, 226);
+        font-size: xx-large;
+        /* font-size: 30px; */
+        font-weight: 900;
+        text-align: center;
+        border-top: 10px solid black;
+        border-bottom: 10px solid black;
+        margin: 0px auto;
+        padding: none;
+        padding-bottom: 0px;
+        display: block;
+        width: auto;
+      }
+
+      .ol {
+        border-right: 10px solid black;
+        font-size: large;
+        font-weight: 700;
+        display: block;
+        margin: 0px;
+        padding: 20px;
+        padding-left: 0px;
+        width: 100px;
+        text-align: center;
+        justify-content: center;
+      }
+
+      .cenbox {
+        border: 10px solid red;
+      }
+
+      .naver {
+        border: 10px solid greenyellow;
+      }
+
+      .national {
+        border: 10px solid yellow;
+      }
+
+      .wave {
+        border: 10px solid rgb(0, 34, 255);
+      }
+
+      .cenbox,
+      .naver,
+      .national,
+      .wave {
+        background-color: rgb(221, 221, 200);
+        text-align: center;
+        display: block;
+        padding: 5px;
+        margin: 25px;
+        width: 100px;
+        justify-content: center;
+        font-size: 20px;
+        font-weight: 800;
+      }
+      .back {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-image: url("boximage.jpg");
+        border: 10px solid rgb(17, 3, 3);
+        width: auto;
+        height: 400px;
+        /* padding: 180px; */
+        margin: 20px auto;
+        background-color: aquamarine;
+      }
+
+      .im {
+        background-color: rgb(129, 180, 239);
+        text-align: center;
+        border: 5px solid black;
+        width: auto;
+        margine: 100px auto;
+        padding: 5px;
+        justify-content: center;
+        display: flex;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="logo">
+      <h1>LOGO</h1>
+    </div>
+
+    <div id="grid">
+      <div class="ol">
+        <ol>
+          <li>Netflix</li>
+          <li>Naver</li>
+          <li>National</li>
+          <li>Wave</li>
+        </ol>
+      </div>
+
+      <div>
+        <div class="cenbox">
+          <p>
+            <a
+              href="https://www.netflix.com/browse"
+              target="_blank"
+              title="Netflix"
+              >100*100 <br />Netflix</a
+            >
+          </p>
+        </div>
+        <div class="naver">
+          <p>
+            <a href="https://www.naver.com/" target="_blank" title="Naver"
+              >100*100 <br />Naver</a
+            >
+          </p>
+        </div>
+        <div class="national">
+          <p>
+            <a
+              href="https://www.natgeokorea.com/"
+              target="_blank"
+              title="Nationnal"
+              >100*100 <br />National</a
+            >
+          </p>
+        </div>
+        <div class="wave">
+          <p>
+            <a href="https://www.wavve.com/" target="_blank" title="Wave"
+              >100*100 <br />Wave</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="back">
+      <div>
+        <p class="im"><strong>i'm box</strong></p>
+      </div>
+    </div>
+  </body>
+</html>
